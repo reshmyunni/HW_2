@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <form>
+    <div class="container">
+        <div class="table">
+            <div class="row">
+                <div class="col col-12 col-sm-8">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" class="form-control" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="textarea" class="form-control" id="address"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" class="form-control" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td><input type="date" class="form-control" id="dob"></td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" class="form-control" id="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" class="form-control" id="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password</td>
+                        <td><input type="password" class="form-control" id="confirmpassword"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" class="btn btn-secondary" onclick=checkValidation();>REGISTER</td>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+
+<script>
+    function checkValidation(){
+        var name = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var dob = document.getElementById("dob").value;
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var confirmpassword = document.getElementById("confirmpassword").value;
+        if(password == confirmpassword){
+            console.log("Valid");
+        }else{
+            console.log("Password and confirm password should be same");
+        }
+        var user = {name:name,address:address,email:email,dob:dob,username:username,password:password,confirmpassword:confirmpassword};
+        console.log(user);
+    }
+</script>
+
+</html>
